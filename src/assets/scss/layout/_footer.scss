@@ -1,0 +1,38 @@
+footer {
+  .footer-top {
+    height: 250px;
+
+    .footer-top-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .footer-bottom {
+    height: 272px;
+    background-image: url('../img/darthvader_2x.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 272px;
+    background-color: $lightblack;
+    color: $grey;
+
+    .footer-title{
+        text-align: center;
+        font-size: 14px;
+        margin-bottom: 40px;
+
+        strong{
+            font-style: normal;
+        }
+    }
+
+    a {
+      color: $grey;
+      text-decoration: underline;
+      font-size: 12px;
+      line-height: 30px;
+    }
+  }
+}
