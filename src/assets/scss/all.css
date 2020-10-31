@@ -96,7 +96,8 @@ header {
 
 .movie-desc {
   font-size: 14px;
-  line-height: 24px; }
+  line-height: 24px;
+  margin-bottom: 70px; }
   .movie-desc .container {
     max-width: 780px; }
   .movie-desc .text-img {
@@ -130,3 +131,8 @@ footer .footer-bottom {
     text-decoration: underline;
     font-size: 12px;
     line-height: 30px; }
+  footer .footer-bottom .social .social-title {
+    font-size: 12px;
+    text-align: center; }
+  footer .footer-bottom .social .social-links a {
+    padding: 0 10px; }
