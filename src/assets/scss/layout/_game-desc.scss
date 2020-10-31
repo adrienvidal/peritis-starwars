@@ -1,5 +1,10 @@
 .game-desc {
-    margin-bottom: 200px;
+  margin-bottom: 200px;
+  line-height: 22px;
+
+  .container {
+    max-width: 780px;
+  }
 
   .img-wrapper {
     width: 300px;

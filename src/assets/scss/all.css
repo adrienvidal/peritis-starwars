@@ -3,17 +3,28 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
+  color: #000000;
   /* @include breakpoint('tablet'){
     background-color: red;
   } */ }
 
 h1 {
   font-size: 1rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin-bottom: 20px; }
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px; }
 
 a {
   color: #000000;
   text-decoration: none; }
+
+strong {
+  font-style: italic; }
 
 .img-wrapper {
   width: 100%; }
@@ -68,12 +79,16 @@ header {
       margin-top: 40px; }
 
 .game-desc {
-  margin-bottom: 200px; }
+  margin-bottom: 200px;
+  line-height: 22px; }
+  .game-desc .container {
+    max-width: 780px; }
   .game-desc .img-wrapper {
     width: 300px; }
 
 .banner {
-  height: 400px; }
+  height: 400px;
+  margin-bottom: 100px; }
   @media (min-width: 768px) {
     .banner {
       height: 500px; } }
@@ -81,3 +96,13 @@ header {
     object-fit: cover;
     height: 100%;
     width: 100%; }
+
+.movie-desc {
+  font-size: 14px;
+  line-height: 24px; }
+  .movie-desc .container {
+    max-width: 780px; }
+  .movie-desc .text-img {
+    float: left;
+    padding-right: 20px;
+    padding-bottom: 20px; }
