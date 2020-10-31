@@ -1,0 +1,31 @@
+// @import "../assets/styles/variables.scss";
+
+// absolute centering
+@mixin block-center-v() {
+    bottom: auto;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+@mixin block-center-h() {
+    bottom: auto;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+@mixin block-center-vh() {
+    bottom: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin block-center-none() {
+    bottom: auto;
+    top: auto;
+    left: auto;
+    transform: translate(0, 0);
+}

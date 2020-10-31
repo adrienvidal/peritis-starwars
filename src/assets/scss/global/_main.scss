@@ -1,7 +1,14 @@
-body{
-    // background-color: $primary;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+html, body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+
+  /* @include breakpoint('tablet'){
+    background-color: red;
+  } */
 }
 
-h1{
-    // color: $primary;
+h1 {
+  // color: $primary;
 }
