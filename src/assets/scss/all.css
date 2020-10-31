@@ -77,9 +77,10 @@ header {
 
 .game-desc {
   margin-bottom: 200px;
-  line-height: 22px; }
-  .game-desc .container {
-    max-width: 780px; }
+  line-height: 22px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
   .game-desc .img-wrapper {
     width: 300px; }
 
@@ -97,9 +98,10 @@ header {
 .movie-desc {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 70px; }
-  .movie-desc .container {
-    max-width: 780px; }
+  margin-bottom: 70px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto; }
   .movie-desc .text-img {
     float: left;
     padding-right: 20px;
