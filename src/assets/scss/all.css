@@ -44,9 +44,7 @@ header {
   background-color: #000000;
   position: relative;
   z-index: 1;
-  /* background-image: url('../img/header-bg.png');
-      background-size: cover;
-      background-position: center; */ }
+  margin-bottom: 100px; }
   @media (min-width: 768px) {
     .intro {
       height: 500px; } }
@@ -70,6 +68,16 @@ header {
       margin-top: 40px; }
 
 .game-desc {
-  margin-top: 100px; }
+  margin-bottom: 200px; }
   .game-desc .img-wrapper {
     width: 300px; }
+
+.banner {
+  height: 400px; }
+  @media (min-width: 768px) {
+    .banner {
+      height: 500px; } }
+  .banner .banner-img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%; }

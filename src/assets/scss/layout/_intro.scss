@@ -4,9 +4,7 @@
   background-color: $black;
   position: relative;
   z-index: 1;
-  /* background-image: url('../img/header-bg.png');
-      background-size: cover;
-      background-position: center; */
+  margin-bottom: 100px;
 
   @include breakpoint('tablet') {
     height: 500px;
