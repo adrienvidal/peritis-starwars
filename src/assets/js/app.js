@@ -1,11 +1,15 @@
 const app = {
+  // variables
   desktopSize: window.matchMedia('(min-width: 768px)'),
 
+  // states
   state: {
     navMobileIsOpen: false
   },
 
+  // init app
   init () {
+    // add scroll plugin for gsap
     gsap.registerPlugin(ScrollTrigger)
 
     this.navMobile()
@@ -46,18 +50,6 @@ const app = {
     })
   },
 
-  sectionGame () {
-    gsap.set('.game-desc-img', {
-      scrollTrigger: {
-        trigger: '.game-desc-img',
-        start: 'top 80px',
-        endTrigger: '.game-desc',
-        end: 'bottom 80%',
-        pin: true
-      }
-    })
-  },
-
   sectionIntro () {
     const tl = gsap.timeline()
     gsap.set('.logo', {
@@ -73,11 +65,24 @@ const app = {
     })
   },
 
+  sectionGame () {
+    gsap.set('.game-desc-img', {
+      scrollTrigger: {
+        trigger: '.game-desc-img',
+        start: 'top 80px',
+        endTrigger: '.game-desc',
+        end: 'bottom 80%',
+        pin: true
+      }
+    })
+  },
+
   sectionBanner () {
     this.parallaxAnimation('.banner', 'bottom')
   },
 
   parallaxAnimation (section, startPos) {
+    // animation parallax with gsap
     gsap.utils.toArray(`${section} .parallax`).forEach((layer) => {
       const rate = layer.dataset.rate
       const pos = layer.offsetHeight * rate
