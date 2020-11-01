@@ -1,17 +1,19 @@
 const app = {
+  desktopSize: window.matchMedia('(min-width: 768px)'),
+
   state: {
     isOpen: false
   },
 
   init () {
     this.navMobile()
+    this.stickyImg()
   },
 
   navMobile () {
     const header = document.querySelector('header')
     const burgerMenu = document.querySelector('.burger-menu')
     const bodyTag = document.querySelector('body')
-    const desktopSize = window.matchMedia('(min-width: 768px)')
 
     const showMenu = (header, bodyTag) => {
       header.classList.add('active')
@@ -34,8 +36,22 @@ const app = {
     })
 
     window.addEventListener('resize', () => {
-      if (desktopSize.matches) {
+      if (this.desktopSize.matches) {
         closeMenu(header, bodyTag)
+      }
+    })
+  },
+
+  stickyImg () {
+    gsap.registerPlugin(ScrollTrigger)
+
+    gsap.set('.sticky-img', {
+      scrollTrigger: {
+        trigger: '.sticky-img',
+        start: 'top 80px',
+        endTrigger: '.game-desc',
+        end: 'bottom 80%',
+        pin: true
       }
     })
   }

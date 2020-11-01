@@ -4,13 +4,13 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
-  
+
   @include breakpoint('tablet') {
     margin-bottom: 200px;
     text-align: left;
   }
 
-  .game-desc-left{
+  .game-desc-left {
     text-align: center;
 
     @include breakpoint('tablet') {
@@ -26,5 +26,4 @@
       display: block;
     }
   }
-
 }
