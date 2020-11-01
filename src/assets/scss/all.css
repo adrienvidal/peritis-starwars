@@ -8,6 +8,9 @@ body {
     background-color: red;
   } */ }
 
+.main {
+  overflow: hidden; }
+
 h1 {
   font-size: 1rem;
   font-weight: bold;
@@ -17,7 +20,8 @@ h2 {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+  line-height: 22px; }
 
 a {
   color: #000000;
@@ -52,9 +56,10 @@ header {
   background-color: #000000;
   position: relative;
   z-index: 1;
-  margin-bottom: 100px; }
+  margin-bottom: 30px; }
   @media (min-width: 768px) {
     .intro {
+      margin-bottom: 100px;
       height: 500px; } }
   .intro .logo-bg {
     width: 100%;
@@ -76,13 +81,26 @@ header {
       margin-top: 40px; }
 
 .game-desc {
-  margin-bottom: 200px;
   line-height: 22px;
   width: 75%;
   margin-left: auto;
-  margin-right: auto; }
-  .game-desc .img-wrapper {
-    width: 300px; }
+  margin-right: auto;
+  margin-bottom: 100px; }
+  @media (min-width: 768px) {
+    .game-desc {
+      margin-bottom: 200px;
+      text-align: left; } }
+  .game-desc .game-desc-left {
+    text-align: center; }
+    @media (min-width: 768px) {
+      .game-desc .game-desc-left {
+        text-align: left; } }
+  .game-desc .game-desc-right {
+    display: none;
+    text-align: center; }
+    @media (min-width: 768px) {
+      .game-desc .game-desc-right {
+        display: block; } }
 
 .banner {
   height: 400px;
@@ -98,14 +116,20 @@ header {
 .movie-desc {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 70px;
   width: 75%;
   margin-left: auto;
   margin-right: auto; }
-  .movie-desc .text-img {
+  @media (min-width: 768px) {
+    .movie-desc {
+      margin-bottom: 70px; } }
+  .movie-desc .img-wrapper {
+    width: 100%;
     float: left;
-    padding-right: 20px;
-    padding-bottom: 20px; }
+    margin-right: 20px;
+    margin-bottom: 20px; }
+    @media (min-width: 768px) {
+      .movie-desc .img-wrapper {
+        width: 300px; } }
 
 footer .footer-top {
   height: 250px; }

@@ -4,9 +4,10 @@
   background-color: $black;
   position: relative;
   z-index: 1;
-  margin-bottom: 100px;
-
+  margin-bottom: 30px;
+  
   @include breakpoint('tablet') {
+    margin-bottom: 100px;
     height: 500px;
   }
 

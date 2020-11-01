@@ -5,10 +5,15 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   color: $black;
+  // overflow: hidden;
 
   /* @include breakpoint('tablet'){
     background-color: red;
   } */
+}
+
+.main{
+  overflow: hidden;
 }
 
 h1 {
@@ -22,6 +27,7 @@ h2 {
   font-weight: bold;
   text-align: center;
   margin-bottom: 20px;
+  line-height: 22px;
 }
 
 a {

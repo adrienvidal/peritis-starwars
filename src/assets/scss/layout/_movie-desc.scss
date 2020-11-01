@@ -1,14 +1,24 @@
 .movie-desc {
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 70px;
   width: 75%;
   margin-left: auto;
   margin-right: auto;
 
-  .text-img {
+  @include breakpoint('tablet') {
+    margin-bottom: 70px;
+  }
+
+
+  .img-wrapper {
+    width: 100%;
     float: left;
-    padding-right: 20px;
-    padding-bottom: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+    @include breakpoint('tablet') {
+      width: 300px;
+    }
+
   }
 }
