@@ -175,7 +175,8 @@ footer .footer-bottom {
   background-color: #000000;
   position: relative;
   z-index: 1;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  overflow: hidden; }
   @media (min-width: 768px) {
     .intro {
       margin-bottom: 100px;
@@ -223,7 +224,8 @@ footer .footer-bottom {
 
 .banner {
   height: 400px;
-  margin-bottom: 100px; }
+  margin-bottom: 100px;
+  overflow: hidden; }
   @media (min-width: 768px) {
     .banner {
       height: 500px; } }

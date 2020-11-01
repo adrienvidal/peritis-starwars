@@ -1,6 +1,7 @@
 .banner {
   height: 400px;
   margin-bottom: 100px;
+  overflow: hidden;
 
   @include breakpoint('tablet') {
     height: 500px;
@@ -10,5 +11,6 @@
       object-fit: cover;
       height: 100%;
       width: 100%;
+      // transform: translate(0px, -20%);
   }
 }
