@@ -10,7 +10,7 @@ const app = {
 
     this.navMobile()
     this.sectionIntro()
-    this.stickyImg()
+    this.sectionGame()
     this.sectionBanner()
   },
 
@@ -46,7 +46,7 @@ const app = {
     })
   },
 
-  stickyImg () {
+  sectionGame () {
     gsap.set('.game-desc-img', {
       scrollTrigger: {
         trigger: '.game-desc-img',
@@ -63,13 +63,14 @@ const app = {
   },
 
   sectionBanner () {
-    this.parallaxAnimation('.banner', 'top')
+    this.parallaxAnimation('.banner', 'bottom')
   },
 
   parallaxAnimation (section, startPos) {
     gsap.utils.toArray(`${section} .parallax`).forEach(layer => {
       const rate = layer.dataset.rate
       const pos = layer.offsetHeight * rate
+
       gsap.to(layer, {
         scrollTrigger: {
           trigger: section,
