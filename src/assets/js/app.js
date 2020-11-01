@@ -44,10 +44,9 @@ const app = {
 
   stickyImg () {
     gsap.registerPlugin(ScrollTrigger)
-
-    gsap.set('.sticky-img', {
+    gsap.set('.game-desc-img', {
       scrollTrigger: {
-        trigger: '.sticky-img',
+        trigger: '.game-desc-img',
         start: 'top 80px',
         endTrigger: '.game-desc',
         end: 'bottom 80%',
