@@ -46,3 +46,7 @@ strong{
     width: 100%;
   }
 }
+
+button:hover, button:focus{
+  outline: none;
+}
