@@ -2,7 +2,7 @@ const app = {
   desktopSize: window.matchMedia('(min-width: 768px)'),
 
   state: {
-    isOpen: false
+    navMobileIsOpen: false
   },
 
   init () {
@@ -22,17 +22,17 @@ const app = {
     const showMenu = (header, bodyTag) => {
       header.classList.add('active')
       bodyTag.style.overflow = 'hidden'
-      this.state.isOpen = true
+      this.state.navMobileIsOpen = true
     }
 
     const closeMenu = (header, bodyTag) => {
       header.classList.remove('active')
       bodyTag.style.overflow = ''
-      this.state.isOpen = false
+      this.state.navMobileIsOpen = false
     }
 
     burgerMenu.addEventListener('click', () => {
-      if (!this.state.isOpen) {
+      if (!this.state.navMobileIsOpen) {
         showMenu(header, bodyTag)
       } else {
         closeMenu(header, bodyTag)
@@ -59,7 +59,18 @@ const app = {
   },
 
   sectionIntro () {
-    this.parallaxAnimation('.intro', 'top')
+    const tl = gsap.timeline()
+    gsap.set('.logo', {
+      opacity: 1
+    })
+    tl.from('.logo', {
+      duration: 2,
+      opacity: 0,
+      scale: 0,
+      onComplete: () => {
+        this.parallaxAnimation('.intro', 'top')
+      }
+    })
   },
 
   sectionBanner () {
@@ -67,7 +78,7 @@ const app = {
   },
 
   parallaxAnimation (section, startPos) {
-    gsap.utils.toArray(`${section} .parallax`).forEach(layer => {
+    gsap.utils.toArray(`${section} .parallax`).forEach((layer) => {
       const rate = layer.dataset.rate
       const pos = layer.offsetHeight * rate
 
@@ -81,7 +92,28 @@ const app = {
         ease: 'none'
       })
     })
+  },
+
+  hideLoader () {
+    const preloader = document.querySelector('.preloader')
+    gsap.to('.preloader-icon', {
+      opacity: 0,
+      ease: 'none',
+      duration: 2
+    })
+    gsap.to(preloader, {
+      opacity: 0,
+      ease: 'none',
+      duration: 2,
+      delay: 1,
+      onComplete: () => {
+        app.init()
+        preloader.style.display = 'none'
+      }
+    })
   }
 }
 
-app.init()
+document.addEventListener('DOMContentLoaded', () => {
+  app.hideLoader()
+})

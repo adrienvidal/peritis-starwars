@@ -35,6 +35,63 @@ strong {
 button:hover, button:focus {
   outline: none; }
 
+/*----------- Preloader -----------*/
+.preloader {
+  background-color: #0e0e0e;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99999; }
+
+.preloader .preloader-block {
+  -webkit-transform: translate(50%, 50%);
+  bottom: 50%;
+  position: fixed;
+  right: 50%;
+  transform: translate(50%, 50%);
+  z-index: 3000; }
+
+.preloader .preloader-block .preloader-icon .loading-dot {
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline-block;
+  height: 13px;
+  width: 13px; }
+
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-1 {
+  -webkit-animation: 1.2s grow ease-in-out infinite;
+  animation: 1.2s grow ease-in-out infinite; }
+
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-2 {
+  -webkit-animation: 1.2s grow ease-in-out infinite 0.15555s;
+  animation: 1.2s grow ease-in-out infinite 0.15555s;
+  margin: 0 14px; }
+
+.preloader .preloader-block .preloader-icon .loading-dot.loading-dot-3 {
+  -webkit-animation: 1.2s grow ease-in-out infinite 0.3s;
+  animation: 1.2s grow ease-in-out infinite 0.3s; }
+
+@-webkit-keyframes grow {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
+@keyframes grow {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scale(0);
+    transform: scale(0); }
+  40% {
+    -webkit-transform: scale(1);
+    transform: scale(1); } }
+
 header {
   position: fixed;
   top: 0;
@@ -172,7 +229,7 @@ footer .footer-bottom {
 
 .intro {
   width: 100%;
-  height: 400px;
+  height: 100vh;
   background-color: #000000;
   position: relative;
   z-index: 1;
@@ -180,8 +237,7 @@ footer .footer-bottom {
   overflow: hidden; }
   @media (min-width: 768px) {
     .intro {
-      margin-bottom: 100px;
-      height: 500px; } }
+      margin-bottom: 100px; } }
   .intro .logo-bg {
     width: 100%;
     height: 100%;
@@ -199,7 +255,8 @@ footer .footer-bottom {
         max-width: 738px; } }
     .intro .img-wrapper .logo {
       width: 100%;
-      margin-top: 40px; }
+      margin-top: 40px;
+      opacity: 0; }
 
 .game-desc {
   line-height: 22px;
