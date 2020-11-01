@@ -11,19 +11,23 @@ footer {
 
   .footer-bottom {
     height: 272px;
-    background-image: url('../img/darthvader_2x.jpg');
+    background-image: url('../img/darthvader.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: auto 272px;
     background-color: $lightblack;
     color: $grey;
 
+    @include breakpoint('tablet') {
+      background-image: url('../img/darthvader_2x.jpg');
+    }
+
     .footer-title {
       display: none;
       text-align: center;
       font-size: 14px;
       margin-bottom: 40px;
-      
+
       @include breakpoint('tablet') {
         display: block;
       }

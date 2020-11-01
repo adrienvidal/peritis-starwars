@@ -3,10 +3,7 @@ html,
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
-  color: #000000;
-  /* @include breakpoint('tablet'){
-    background-color: red;
-  } */ }
+  color: #000000; }
 
 .main {
   overflow: hidden; }
@@ -215,12 +212,15 @@ footer .footer-top {
 
 footer .footer-bottom {
   height: 272px;
-  background-image: url("../img/darthvader_2x.jpg");
+  background-image: url("../img/darthvader.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: auto 272px;
   background-color: #181818;
   color: #9b9b9b; }
+  @media (min-width: 768px) {
+    footer .footer-bottom {
+      background-image: url("../img/darthvader_2x.jpg"); } }
   footer .footer-bottom .footer-title {
     display: none;
     text-align: center;

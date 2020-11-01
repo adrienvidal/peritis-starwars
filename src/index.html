@@ -17,10 +17,10 @@
   <body>
     <div class="main">
       
-      <header class="">
+      <header>
         <button class="burger-menu">
-          <img class="menu-open" src="./assets/img/menu.png" alt="burger-nav">
-          <img class="menu-close" src="./assets/img/close.png" alt="burger-nav">
+          <img class="menu-open" src="./assets/img/menu.png" alt="menu-open">
+          <img class="menu-close" src="./assets/img/close.png" alt="menu-close">
         </button>
         <nav class="main-nav">
           <div class="nav-inner">
@@ -35,7 +35,11 @@
       </header>
 
       <section class="intro">
-        <img class="logo-bg" src="./assets/img/header-bg.png" alt="header-bg" />
+        <picture>
+          <source media="(min-width:768px)" srcset="./assets/img/header-bg-2x.png">
+          <img class="logo-bg" src="./assets/img/header-bg.png" alt="header-bg" />
+        </picture>
+        
         <div class="img-wrapper">
           <img class="logo" src="./assets/img/logo.png" alt="logo" />
         </div>
@@ -105,7 +109,10 @@
       </section>
 
       <section class="banner">
-        <img class="banner-img" src="./assets/img/kiloren.jpg" alt="kiloren" />
+        <picture>
+          <source media="(min-width:768px)" srcset="./assets/img/kiloren-2x.jpg">
+          <img class="banner-img" src="./assets/img/kiloren.jpg" alt="kiloren" />
+        </picture>
       </section>
 
       <section class="movie-desc">
@@ -113,10 +120,14 @@
 
         <p>
           <div class="img-wrapper">
-            <img
-              src="./assets/img/r2d2_c3p0.jpg"
-              alt="r2d2_c3p0"
-            />
+            <picture>
+              <source media="(min-width:768px)" srcset="./assets/img/r2d2_c3p0-2x.jpg">
+                <img
+                src="./assets/img/r2d2_c3p0.jpg"
+                alt="r2d2_c3p0"
+              />
+            </picture>
+            
           </div>
           <strong>La Guerre des étoiles</strong> (titre original
           <strong>Star Wars</strong>, soit littéralement Guerres Stellaires )
@@ -157,11 +168,15 @@
 
       <footer>
         <section class="footer-top">
-          <img
-            class="footer-top-img"
-            src="./assets/img/stormtroopers-2x.jpg"
-            alt="stormtroopers"
-          />
+          <picture>
+            <source media="(min-width:768px)" srcset="./assets/img/stormtroopers-2x.jpg">
+              <img
+                class="footer-top-img"
+                src="./assets/img/stormtroopers.jpg"
+                alt="stormtroopers"
+              />
+          </picture>
+          
         </section>
         <section
           class="footer-bottom d-flex justify-content-center align-items-center"
