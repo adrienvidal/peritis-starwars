@@ -147,9 +147,13 @@ footer .footer-bottom {
   background-color: #181818;
   color: #9b9b9b; }
   footer .footer-bottom .footer-title {
+    display: none;
     text-align: center;
     font-size: 14px;
     margin-bottom: 40px; }
+    @media (min-width: 768px) {
+      footer .footer-bottom .footer-title {
+        display: block; } }
     footer .footer-bottom .footer-title strong {
       font-style: normal; }
   footer .footer-bottom a {
@@ -157,8 +161,16 @@ footer .footer-bottom {
     text-decoration: underline;
     font-size: 12px;
     line-height: 30px; }
-  footer .footer-bottom .social .social-title {
-    font-size: 12px;
-    text-align: center; }
-  footer .footer-bottom .social .social-links a {
-    padding: 0 10px; }
+  footer .footer-bottom .social {
+    margin-top: 50px; }
+    @media (min-width: 768px) {
+      footer .footer-bottom .social {
+        margin-top: 0; } }
+    footer .footer-bottom .social .social-title {
+      font-size: 12px;
+      text-align: center; }
+      @media (min-width: 768px) {
+        footer .footer-bottom .social .social-title {
+          margin-bottom: 10px; } }
+    footer .footer-bottom .social .social-links a {
+      padding: 0 10px; }

@@ -19,9 +19,14 @@ footer {
     color: $grey;
 
     .footer-title {
+      display: none;
       text-align: center;
       font-size: 14px;
       margin-bottom: 40px;
+      
+      @include breakpoint('tablet') {
+        display: block;
+      }
 
       strong {
         font-style: normal;
@@ -36,9 +41,19 @@ footer {
     }
 
     .social {
+      margin-top: 50px;
+
+      @include breakpoint('tablet') {
+        margin-top: 0;
+      }
+
       .social-title {
         font-size: 12px;
         text-align: center;
+
+        @include breakpoint('tablet') {
+          margin-bottom: 10px;
+        }
       }
 
       .social-links {
