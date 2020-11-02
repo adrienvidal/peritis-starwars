@@ -10,7 +10,8 @@
 
 ## Functions App
 
-* css Bootstrap
+* SASS
+* Bootstrap
 * Animation with GSAP
 
 ## Functions Env
