@@ -4,6 +4,13 @@
 
 ## Init App
 
+* Clone or download this Git repo onto your computer.
+* Install [Node.js](https://nodejs.org/en/) if you don't have it yet.
+* Install gulp global
+```
+npm install --global gulp-cli
+```
+
 * Run `npm install`
 * Run `npm start` to run the dev environnement (port:3000)
 * Run `npm run build` to run the prod environnement (port:5000)
